@@ -1,0 +1,16 @@
+{
+  "name": "hergo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "redcom@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "start:server": "./node_modules/.bin/nodemon server/index.js",
+    "start:client": "pushd client && yarn start",
+    "start": "./node_modules/.bin/parallelshell 'yarn start:server' 'yarn start:client'"
+  },
+  "dependencies": {
+    "nodemon": "^1.17.1",
+    "parallelshell": "^3.0.2"
+  }
+}
